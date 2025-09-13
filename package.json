@@ -1,0 +1,47 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "tailwind:init": "tailwindcss init -p",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/ios": "^7.4.3",
+    "@ionic/react": "^8.7.3",
+    "@ionic/react-router": "^8.7.3",
+    "axios": "^1.12.1",
+    "ionicons": "^8.0.13",
+    "libphonenumber-js": "^1.12.16",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-hook-form": "^7.62.0",
+    "react-otp-input": "^3.1.1",
+    "react-phone-number-input": "^3.4.12",
+    "react-router-dom": "^7.9.0",
+    "react-toastify": "^11.0.5",
+    "socket.io-client": "^4.8.1",
+    "yup": "^1.7.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3",
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "vite": "^7.1.2"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "appId": "com.example.app",
+  "appName": "Clavox",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
