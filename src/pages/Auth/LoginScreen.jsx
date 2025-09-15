@@ -23,7 +23,7 @@ const LoginScreen = () => {
   return (
     <div className="min-h-screen flex items-center justify-center flex-col p-4" style={{backgroundColor: '#1C1A1A'}}>
       {/* Logo */}
-      <div className="flex justify-center mb-20 ">
+      <div className="flex justify-center mb-28 ">
         <div className="flex items-center gap-x-2 -translate-y-18 md:-translate-y-8">
           <div className="w-[50px] h-[50px] sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20">
             <img
@@ -32,7 +32,7 @@ const LoginScreen = () => {
               className="w-full h-full object-contain"
             />
           </div>
-          <span style={{color: '#D9D9D9'}} className="text-2xl font-medium   ">Clevox</span>
+          <span style={{color: '#D9D9D9'}} className="text-2xl font-medium   ">Clavox</span>
         </div>
       </div>
       <div className="w-full max-w-sm mt-20">
