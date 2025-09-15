@@ -38,7 +38,7 @@ const SuccessScreen = (props) => {
 
         <button
           onClick={handleContinue}
-          className=" bg-[#D9D9D9] text-black font-bold py-3 px-24 rounded-lg transition-all hover:bg-opacity-90"
+          className="bg-[#D9D9D9] text-black font-bold py-3 px-8 rounded-lg transition-all hover:bg-opacity-90 whitespace-nowrap"
         >
           Lanjutkan Pendaftaran
         </button>
