@@ -1,23 +1,33 @@
 import React, { useState } from 'react';
 import Logo from '../../assets/Logo.png';
+import { useHistory } from "react-router-dom";
 
 const LoginScreen = () => {
+  const history = useHistory();
+
+  const [isGoogleLoading, setIsGoogleLoading] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGoogleLogin = async () => {
-    setIsLoading(true);
+    setIsGoogleLoading(true);
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
       alert('Fungsi Google OAuth akan diimplementasikan di backend');
     } catch (error) {
       console.error('Login error:', error);
     } finally {
-      setIsLoading(false);
+      setIsGoogleLoading(false);
     }
   };
 
   const handleManualLogin = () => {
-    alert('Redirect ke halaman login manual');
+    setIsLoading(true); // aktifkan loading
+
+    // simulasi proses login / register
+    setTimeout(() => {
+      setIsLoading(false);
+      history.push("/register"); // pindah halaman setelah selesai
+    }, 2000);
   };
 
   return (
@@ -50,11 +60,11 @@ const LoginScreen = () => {
         <div className="mb-3 px-2">
           <button
             onClick={handleGoogleLogin}
-            disabled={isLoading}
+            disabled={isGoogleLoading}
             className="w-full font-medium py-4 px-4 rounded-lg flex items-center justify-center"
             style={{backgroundColor: '#D9D9D9', color: '#000000'}}
           >
-            {isLoading ? (
+            {isGoogleLoading ? (
               <div className="flex items-center">
                 <svg className="animate-spin -ml-1 mr-3 h-4 w-4 text-gray-600" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -87,12 +97,20 @@ const LoginScreen = () => {
         <div className="mb-8 px-2">
           <button
             onClick={handleManualLogin}
-            className="w-full font-medium py-4 px-4 rounded-lg"
-            style={{backgroundColor: '#555', color: '#D9D9D9'}}
+            disabled={isLoading} // tombol dikunci saat loading
+            className={`w-full font-medium py-4 px-4 rounded-lg flex justify-center items-center ${
+              isLoading ? "bg-gray-400 cursor-not-allowed" : ""
+            }`}
+            style={{ backgroundColor: "#555", color: "#D9D9D9" }}
           >
-            Buat akun
+            {isLoading ? (
+              <div className="w-6 h-6 border-4 border-gray-300 border-t-gray-700 rounded-full animate-spin"></div>
+            ) : (
+              "Buat akun"
+            )}
           </button>
         </div>
+
 
         {/* Footer Text */}
         <div className="text-center">
