@@ -5,7 +5,8 @@ import OTPVerificationScreen from "./pages/Auth/OtpVerification";
 import RegisterScreen from "./pages/Auth/RegisterScreen";
 import SuccessScreen from "./components/common/SuccessScreen";
 import ProcessingScreen from "./components/common/ProcessingScreen";
-import OTPPage from "./verification/OTPpage";
+import OTPPage from "./verification/OtpInput";
+import VerifySuccess from "./test/VerifySuccess";
 
 // ✨ Impor UserProvider
 import { UserProvider } from './components/common/AppContext';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/success" component={SuccessScreen} />
           <Route path="/processing" component={ProcessingScreen} />
           <Route path="/verify-otp" component={OTPPage} />
+          <Route path="/test-verify-success" component={VerifySuccess} />
         </Switch>
       </Router>
     </UserProvider>

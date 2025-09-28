@@ -5,6 +5,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes pop {
+  0% { opacity: 0; transform: scale(0.5); }
+  70% { opacity: 1; transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.animate-pop {
+  animation: pop 0.8s ease-out forwards;
+}
+
 /*
  * ===================================================================
  * BAGIAN 3: CSS CUSTOM UNTUK LIBRARY react-phone-number-input

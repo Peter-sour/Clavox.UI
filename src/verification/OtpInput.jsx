@@ -31,8 +31,8 @@ const OTPPage = () => {
       if (!response.ok) {
         throw new Error(data.message || 'Kode OTP tidak valid.');
       }
-      alert('Verifikasi berhasil! Akun Anda sudah aktif.');
-    //   history.push('/login');
+      // alert('Verifikasi berhasil! Akun Anda sudah aktif.');
+      history.push('/test-verify-success');
     } catch (err) {
       setError(err.message);
       // Menampilkan error di UI akan lebih baik dari alert
